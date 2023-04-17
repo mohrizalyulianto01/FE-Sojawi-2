@@ -128,15 +128,22 @@ h2 {
 
 /*Footer*/
 footer {
-  background-color: #005643;
+  background: linear-gradient(160deg, #048853, #005643);
   color: #fff;
-  text-align: center;
-  padding: 0.1rem 0;
-  margin-top: 3rem;
+  border-radius: 20px 20px 0px 0px;
 }
 
-.text-end a:hover {
-  background-color: #fcce04;
+.footer .footer-brand {
+  color: #fff;
+  font-weight: 900;
+}
+.footer-brand a {
+  text-decoration: none;
+}
+
+.col1 a:hover {
+  text-decoration: none;
+  color: #fccd01;
 }
 
 .text-end {
@@ -147,4 +154,21 @@ footer {
 .text-start {
   padding-top: 2rem;
   padding-left: 2rem;
+}
+.col1 a {
+  color: #fff;
+}
+
+.list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.list a:hover {
+  color: #fccd01;
+  text-decoration: none;
+}
+
+.footer .sosial i:hover {
+  color: #fccd01;
 }
