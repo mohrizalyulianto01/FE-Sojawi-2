@@ -12,25 +12,35 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <!-- My icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- My icons Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
     <!-- My Style -->
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- logo Tiitle bar -->
-    <link rel="icon" href="Assets/Logo Haji Alwi.png" type="image/x-icon" />
 
     <title>Soto Jogja H.Alwi</title>
   </head>
   <body>
     <!--Navbar Start-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed w-100"
+    >
       <div class="container">
         <a class="logo" href="#">
           <img
-            src="assets/Logo Haji Alwi.png"
+            src="assets/Logo"
             alt="logo haji alwi"
             width="80"
             class="border border-white"
@@ -50,19 +60,19 @@
         <div class="collapse navbar-collapse navbar-nav" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="btn active" href="#home">Home</a>
+              <a class="btn" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="btn" href="#about">Tentang Kami</a>
             </li>
             <li class="nav-item">
-              <a class="btn" href="#menu">Menu</a>
+              <a class="btn" href="#menu">Daftar Menu</a>
             </li>
             <li class="nav-item">
               <a class="btn" href="#layanan">Layanan</a>
             </li>
             <li class="nav-item">
-              <a class="btn" href="#">Testimoni</a>
+              <a class="btn" href="#testi">Testimoni</a>
             </li>
             <li class="nav-item">
               <a class="btn" href="#kontak">Kontak</a>
@@ -73,147 +83,434 @@
     </nav>
     <!--Navbar End-->
 
-    <!--Hero Section Strat-->
-    <section id="home" class="container hero">
+    <!-- Hero Section Start-->
+    <section id="hero" class="container-fluid hero masthead">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-md-8 hero-tagline my-auto">
-            <h1 class="fs-1 fw-bold" style="color: #045b32">
-              Mari Menikmati Semangkuk Soto Pinggir Sawah
+            <h1 class="fs-1 fw-bold">
+              Mari Menikmati Semangkuk Soto <br />
+              Di Pinggir Sawah
             </h1>
-            <p>
-              <span class="fw-bold">Soto Jogja H.Alwi</span> makan dengan view
-              sawah Nyoto dengan view persawahan yang syahdu & FREE WIFI yang
-              tentunya banyak pilihan menunya.
+            <p class="paraf">
+              <span class="fw-bold" style="color: #fccd01"
+                >Soto Jogja H.Alwi</span
+              >
+              adalah tempat untuk menikmati makanan dan Nyoto dengan view
+              persawahan yang syahdu & FREE WIFI yang tentunya banyak pilihan
+              menunya.
             </p>
             <a
-              class="btn btn-lg"
+              class="btn btn-lg bg-white fw-bold"
               href="#about"
+              style="color: #005643"
               role="button"
-              style="background-color: #045b32; color: #fff"
               >Kunjungi Kami</a
             >
           </div>
         </div>
+        <img
+          src="assets/ust"
+          alt="gambar ust"
+          width="420"
+          class="hero-img position-absolute end-0 bottom-0"
+        />
+        <img
+          src="assets/Aksen"
+          alt="Aksen"
+          class="aksen-img position-absolute top-0 start-0"
+        />
+        <img
+          src="assets/aksen2"
+          alt="aksen2"
+          width="800"
+          class="aksen-img position-absolute end-0 bottom-0"
+        />
       </div>
-    </section>
-    <!--Hero Section End-->
+      <svg
+        style="pointer-events: none"
+        class="wave"
+        width="100%"
+        height="50px"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 1920 75"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: none;
+            }
 
-    <!--Section About Start-->
-    <section id="about">
+            .b {
+              clip-path: url(#a);
+            }
+
+            .c,
+            .d {
+              /*fill: #f9f9fc;*/
+              fill: #f3fff4;
+            }
+
+            .d {
+              opacity: 0.5;
+              isolation: isolate;
+            }
+          </style>
+          <clipPath id="a">
+            <rect class="a" width="1920" height="75"></rect>
+          </clipPath>
+        </defs>
+        <title>wave</title>
+        <g class="b">
+          <path
+            class="c"
+            d="M1963,327H-105V65A2647.49,2647.49,0,0,1,431,19c217.7,3.5,239.6,30.8,470,36,297.3,6.7,367.5-36.2,642-28a2511.41,2511.41,0,0,1,420,48"
+          ></path>
+        </g>
+        <g class="b">
+          <path
+            class="d"
+            d="M-127,404H1963V44c-140.1-28-343.3-46.7-566,22-75.5,23.3-118.5,45.9-162,64-48.6,20.2-404.7,128-784,0C355.2,97.7,341.6,78.3,235,50,86.6,10.6-41.8,6.9-127,10"
+          ></path>
+        </g>
+        <g class="b">
+          <path
+            class="d"
+            d="M1979,462-155,446V106C251.8,20.2,576.6,15.9,805,30c167.4,10.3,322.3,32.9,680,56,207,13.4,378,20.3,494,24"
+          ></path>
+        </g>
+        <g class="b">
+          <path
+            class="d"
+            d="M1998,484H-243V100c445.8,26.8,794.2-4.1,1035-39,141-20.4,231.1-40.1,378-45,349.6-11.6,636.7,73.8,828,150"
+          ></path>
+        </g>
+      </svg>
+    </section>
+    <!-- Hero Section End -->
+
+    <!--About Start-->
+    <section id="about" class="about">
       <div class="container">
-        <div class="row text-center">
-          <div class="col mb-3">
-            <h2 class="fs-1 fw-bold">Tentang Kami</h2>
-            <p>Mari Mengenal Kami Lebih Dekat</p>
-          </div>
-          <div class="abaout-img mb-4">
-            <img src="assets/Hero.png" class="img-fluid height:auto" alt="" /> 
-          </div>
+        <div class="col mb-3 text-center">
+          <h2 class="fs-1 fw-bold">Tentang Kami</h2>
+          <p>Mari Mengenal Kami Lebih Dekat</p>
         </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div">
-            <p>
+        <div class="row mt-4">
+          <div class="col-md-6 gx-5 mb-4">
+            <div
+              class="bg-image hover-overlay ripple shadow-2-strong rounded-5"
+              data-mdb-ripple-color="light"
+            >
+              <img src="assets/HeroImg" class="img-fluid" />
+              <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15)"
+                ></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>Soto Jogja H.Alwi</strong></h4>
+            <p class="text-muted">
               Soto Jogja H.Alwi Merupakan unit usaha yang berada dijalan yang
               berlokasi di jalan Ki Ageng Pemanahan, Kragilan, Banguntapan atau
-              dekat dengan Universitas Ahamad Dahlan.
-              Kami menyediakan menu utama adalah olahan sotonya yang enak dan
-              segar, serta suasana restorannya pun tak kalah nyaman karena
-              menyediakan view langsung menghadap pesawahan. Di sini terdapat
-              pilihan menu yang menggugah selera, mulai dari
-              <span class="fw-bold">soto daging dan soto ayam</span>. Selain itu
-              juga ada
-              <span class="fw-bold"
-                >sambal bakar yu galak yang rasanya nikmat, dan tentunya
-                pedas.</span
+              dekat dengan Universitas Ahamad Dahlan. Kami menyediakan menu
+              utama adalah olahan sotonya yang enak dan segar<span id="dots"
+                >...</span
+              ><span id="more"
+                >serta suasana restorannya pun tak kalah nyaman karena
+                menyediakan view langsung menghadap pesawahan. Di sini terdapat
+                pilihan menu yang menggugah selera, mulai dari
+                <span class="fw-bold">soto daging dan soto ayam</span>. Selain
+                itu juga ada
+                <span class="fw-bold"
+                  >sambal bakar yu galak yang rasanya nikmat, dan tentunya
+                  pedas.</span
+                ></span
               >
+              <a onclick="myFunction()" id="myBtn" class="fw-bold">Read more</a>
+            </p>
+
+            <p><strong>Kenapa Harus Mampir Ke Soto Jogja H.alwi?</strong></p>
+            <p class="text-muted">
+              Kami Memiliki tempat yang strategis dengan pemandangan view sawah
+              yang dilengkapi dengan lahan parkir yang luas,tempat ibadah dan wc
+              serta kami memiliki berbagai menu makanan soto<span id="text"
+                >...</span
+              ><span id="moreText"
+                >dan juga minman yang menyegarkan dengan harga standar
+                mahasiswa, sehingga sangat cocok digunakan untuk bersantai,
+                diskusi dan kumpul keluarga</span
+              >
+              <a onclick="Function()" id="Btnmore" class="fw-bold">Read more</a>
             </p>
           </div>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L48,149.3C96,171,192,213,288,229.3C384,245,480,235,576,229.3C672,224,768,224,864,213.3C960,203,1056,181,1152,181.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
-    <!--Section About End-->
+    <!--About End-->
 
-    <!--Section Menu Start-->
-    <section id="menu" class="menu">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col">
-            <h2 class="fs-1 fw-bold">Menu Untuk Mu</h2>
-            <p>Temukan Menu Favoritmu Disini dengan harga bersahabat</p>
+    <!--Daftar Menu Start-->
+    <div class="container">
+      <div class="row">
+        <h2 class="fs-1 fw-bold">Daftar Menu</h2>
+        <p>Pilih menu favorite mu disini</p>
+        <!--Menu 1-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
+            </div>
           </div>
         </div>
-        <div class="row">
-          <!--menu 1-->
-          <div class="col-4">
-            <div class="card">
-              <img src="assets/Soto_Ayam.png" alt="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Soto Ayam</h5>
-                <p class="card-text text-center">R<sub>p</sub>. 6000</p>
+        <!--menu 2-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
               </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
             </div>
           </div>
-          <!--end-->
-          <!--menu 2-->
-          <div class="col-4">
-            <div class="card">
-              <img src="assets/Soto_Ayam.png" alt="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Soto Ayam</h5>
-                <p class="card-text text-center">R<sub>p</sub>. 6000</p>
+        </div>
+
+        <!--Menu 3-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
               </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
             </div>
           </div>
-          <!--end-->
-          <!--menu 3-->
-          <div class="col-4">
-            <div class="card">
-              <img src="assets/Soto_Ayam.png" alt="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Soto Ayam</h5>
-                <p class="card-text text-center">R<sub>p</sub>. 6000</p>
+        </div>
+        <!--Menu 4-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
               </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
             </div>
           </div>
-          <!--end-->
-          <!--menu 4-->
-          <div class="col-4">
-            <div class="card mt-3">
-              <img src="assets/Soto_Ayam.png" alt="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Soto Ayam</h5>
-                <p class="card-text text-center">R<sub>p</sub>. 6000</p>
+        </div>
+        <!--Menu 5-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
               </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
             </div>
           </div>
-          <!--end-->
-          <!--menu 5-->
-          <div class="col-4">
-            <div class="card mt-3">
-              <img src="assets/Soto_Ayam.png" alt="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Soto Ayam</h5>
-                <p class="card-text text-center">R<sub>p</sub>. 6000</p>
+        </div>
+        <!--Menu 6-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
               </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
             </div>
           </div>
-          <!--end-->
-          <!--menu 1-->
-          <div class="col-4">
-            <div class="card mt-3">
-              <img src="assets/Soto_Ayam.png" alt="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Soto Ayam</h5>
-                <p class="card-text text-center">R<sub>p</sub>. 6000</p>
+        </div>
+        <!--Menu 7-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
               </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
             </div>
           </div>
-          <!--end-->
+        </div>
+        <!--Menu 8-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--Menu 9-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--Menu 10-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--Menu 11-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--Menu 12-->
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="assets/sotoayam" alt="Gambar produk" />
+            <div class="card-body">
+              <h6 class="card-title">Soto Ayam</h6>
+              <div class="icon-bintang" style="color: orange">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text mt-2">Rp.6.000</p>
+              <a href="#" class="btn btn-dark"
+                ><i class="bi bi-cart-plus-fill m-1"></i>Pesan</a
+              >
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <!--Section Menu End-->
+    </div>
+    <!--Daftar Menu End-->
 
     <!--Layanan section start-->
     <section class="layanan" id="layanan">
@@ -232,7 +529,7 @@
             <div class="card-layanan">
               <div class="circle-icon position-relative mx-auto">
                 <img
-                  src="assets/Reservasi.png"
+                  src="assets/Reservasi"
                   class="position-absolute top-50 start-50 translate-middle"
                 />
               </div>
@@ -249,7 +546,7 @@
             <div class="card-layanan">
               <div class="circle-icon position-relative mx-auto">
                 <img
-                  src="assets/ic-catering.png"
+                  src="assets/IcCatering"
                   class="position-absolute top-50 start-50 translate-middle"
                 />
               </div>
@@ -267,7 +564,7 @@
             <div class="card-layanan">
               <div class="circle-icon position-relative mx-auto">
                 <img
-                  src="assets/ic-sponsor.png"
+                  src="assets/IcSponsor"
                   class="position-absolute top-50 start-50 translate-middle"
                 />
               </div>
@@ -283,6 +580,101 @@
       </div>
     </section>
     <!--Layanan section end-->
+
+    <!--Testimoni Start-->
+    <section class="container-fluid" id="testi">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="mb-4 fs-1 fw-bold text-center">Testimoni</h2>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Carousel indikator -->
+            <ol class="carousel-indicators">
+              <li
+                data-target="#myCarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper untuk carousel items -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="img-box"><img src="assets/testi2" alt="" /></div>
+                <p class="testimonial">
+                  Pernah coba sotonya, tipe yg berkuah bening & seger. Hari ini
+                  coba seblak cunihinnya enak, gurih & kencurnya terasa. Sego
+                  sambalnya standar, sambalnya g terlalu pedes. Favorit saya teh
+                  rosela nya, seger, manis sedikit asam. Es coklatnya juga enak,
+                  coklatnya terasa, ga kemanisan.
+                </p>
+                <p class="overview mb-1"><b>Farah Maemunah</b>, Sleman</p>
+                <div class="icon-bintang" style="color: orange">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="img-box"><img src="assets/testi1" alt="" /></div>
+                <p class="testimonial">
+                  Pertama kesini karena pengen nongkrong aja. Menu camilan nya
+                  tidak terlalu banyak. Kalo udah sore menu soto sudah tidak
+                  lengkap. Ada bakmi jawa. Paling suka minuman Jane jeruk sereh
+                  nya. Kopi tubruk nya gelasnya terlalu mungil.
+                </p>
+                <p class="overview mb-1"><b>Siti Khadijah</b>, Bantul</p>
+                <div class="icon-bintang" style="color: orange">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="img-box"><img src="assets/aldi" alt="" /></div>
+                <p class="testimonial">
+                  Nyobain sarapan disini, pesenan datengnya lama. Padahal cuma
+                  soto dan antrian ga terlalu rame. Apakah sotonya tidak di
+                  persiapkan terlebih dahulu seperti warung soto lainnya.Rasa
+                  sotonya biasa aja sih. Tp tempatnya emg bagus, adem di pinggir
+                  sawah. Harga standar aja kok.
+                </p>
+                <p class="overview mb-1"><b>Ahmad Aldi</b>, Megelang</p>
+                <div class="icon-bintang" style="color: orange">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel kontrol -->
+            <a
+              class="carousel-control-prev"
+              href="#myCarousel"
+              data-slide="prev"
+            >
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#myCarousel"
+              data-slide="next"
+            >
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Testimoni End-->
 
     <!--Section Kontak Start-->
     <section id="kontak">
@@ -339,68 +731,288 @@
     </section>
     <!--Section Kontak End-->
 
+    <!-- FAQ Start -->
+    <section class="bg-gray container-fluid" id="accordion-style-1">
+      <div>
+        <div class="row">
+          <div class="col-12 text-center mb-3 my-5">
+            <h2 class="text-green mb-4 text-center">
+              Frequently Asked Questions
+            </h2>
+            <span class="sub-title">Pertanyaan Seputar Soto jogja H.Alwi</span>
+          </div>
+          <div
+            class="bg-image hover-overlay ripple shadow-2-strong rounded-5"
+            data-mdb-ripple-color="light"
+          >
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="col-8 mx-auto">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <i class="fa fa-amazon main"></i
+                      ><i class="fa fa-angle-double-right mr-3"></i>Bagaimana
+                      Cara Reservasi Tempat di Soto H.Alwi?
+                    </button>
+                  </h5>
+                </div>
+                <!--content1-->
+                <div
+                  id="collapseOne"
+                  class="collapse fade"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.<a
+                      href="https://www.fiverr.com/sunlimetech/fix-your-bootstrap-html-and-css3-issues"
+                      class="ml-3"
+                      target="_blank"
+                      ><strong
+                        >View More designs
+                        <i class="fa fa-angle-double-right"></i></strong
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!--Content 2-->
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <i class="fa fa-plus main"></i
+                      ><i class="fa fa-angle-double-right mr-3"></i>Kenapa Harus
+                      Memilih Soto Jogja H.Alwi?
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse fade"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, \ non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.<a
+                      href="https://www.fiverr.com/sunlimetech/design-and-fix-your-bootstrap-4-issues"
+                      class="ml-3"
+                      target="_blank"
+                      ><strong
+                        >View More designs
+                        <i class="fa fa-angle-double-right"></i></strong
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <i class="fa fa-expeditedssl main"></i
+                      ><i class="fa fa-angle-double-right mr-3"></i>Apakah Soto
+                      Jogja H.Alwi Cocok Untuk Acara Keluarga?
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse fade"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.<a
+                      href="https://www.fiverr.com/sunlimetech/convert-bootstrap-or-html-to-wordpress-for-global-devices"
+                      class="ml-3"
+                      target="_blank"
+                      ><strong
+                        >View More designs
+                        <i class="fa fa-angle-double-right"></i></strong
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!--Content 3-->
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      <i class="fa fa-envelope main"></i
+                      ><i class="fa fa-angle-double-right mr-3"></i>Apakah
+                      Harganya Bersahabat?
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseFour"
+                  class="collapse fade"
+                  aria-labelledby="headingFour"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.<a
+                      href="https://www.fiverr.com/sunlimetech/do-web-development-in-pure-php-and-frameworks"
+                      class="ml-3"
+                      target="_blank"
+                      ><strong
+                        >View More designs
+                        <i class="fa fa-angle-double-right"></i></strong
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ End-->
+
     <!--Footer Start-->
     <footer class="footer mt-5 pt-5">
       <div class="container">
-          <div class="row">
-              <div class="col-lg-4  mt-3 col1">
-                  <h3 class="footer-brand" style="color:#fccd01;">Soto Jogja H.Alwi</h3>
-                  <a href="#" class="mt-3 d-inline-block">sojawi@gmail.com</a>
-                  <a href="#" class="d-block">+628 8988 XXXX</a>
-                  <div class="sosial mt-3">
-                      <a href="#"><i data-feather="instagram"></i></a>
-                      <a href="#" class="mx-3"><i data-feather="facebook"></i></a>
-                      <a href="#"><i data-feather="twitter"></i></a>
-                  </div>
-                  
-              </div>
-              <div class="col-lg-2 mt-3 col2">
-                  <h3 style="color:#fccd01;">Layanan</h3>
-                  <ul class="list">
-                      <li><a href="#layanan">Reservasi</a> </li>
-                      <li><a href="#layanan">Cathering</a> </li>
-                      <li><a href="#layanan">Sponsorship</a> </li>
-                  </ul>
-                  
-              </div>
-               <div class="col-lg-2 mt-3 col3">
-                  <h3 style="color:#fccd01;">Kunjungi Kami</h3>
-                  <ul class="list">
-                      <li><a href="#hero">Home</a> </li>
-                      <li><a href="#about">Tentang Kami</a> </li>
-                      <li><a href="#menu">Menu</a> </li>
-                      <li><a href="#layanan">Layanan</a> </li>
-                      <li><a href="#testimoni">Testimoni</a> </li>
-                      <li><a href="#kontak">Kontak</a> </li>
-                  </ul>
-                  
-              </div>
-              <div class="col mt-3">
-                  <h3 style="color:#fccd01;">
-                      Alamat Kami
-                  </h3>
-                  <p>Jalan Ki Ageng Pemanahan No.45, Kragilan, Tamanan,Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55191</p>
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15810.46869122073!2d110.380172!3d-7.8302795!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575f52279889%3A0x948316e58f0b583d!2sSoto%20Jogja%20H.%20Alwi!5e0!3m2!1sid!2sid!4v1681700988987!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  
-              </div>
-              
+        <div class="row">
+          <div class="col-lg-4 mt-3 col1">
+            <h3 class="footer-brand" style="color: #fccd01">
+              Soto Jogja H.Alwi
+            </h3>
+            <a href="#" class="mt-3 d-inline-block">sojawi@gmail.com</a>
+            <a href="#" class="d-block">+628 8988 XXXX</a>
+            <div class="sosial mt-3">
+              <a href="#"><i data-feather="instagram"></i></a>
+              <a href="#" class="mx-3"><i data-feather="facebook"></i></a>
+              <a href="#"><i data-feather="twitter"></i></a>
+            </div>
           </div>
-          
+          <div class="col-lg-2 mt-3 col2">
+            <h3 style="color: #fccd01">Layanan</h3>
+            <ul class="list">
+              <li><a href="#layanan">Reservasi</a></li>
+              <li><a href="#layanan">Cathering</a></li>
+              <li><a href="#layanan">Sponsorship</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 mt-3 col3">
+            <h3 style="color: #fccd01">Kunjungi Kami</h3>
+            <ul class="list">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#layanan">Layanan</a></li>
+              <li><a href="#testimoni">Testimoni</a></li>
+              <li><a href="#kontak">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="col mt-3">
+            <h3 style="color: #fccd01">Alamat Kami</h3>
+            <p>
+              Jalan Ki Ageng Pemanahan No.45, Kragilan, Tamanan,Kec.
+              Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55191
+            </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15810.46869122073!2d110.380172!3d-7.8302795!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575f52279889%3A0x948316e58f0b583d!2sSoto%20Jogja%20H.%20Alwi!5e0!3m2!1sid!2sid!4v1681700988987!5m2!1sid!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
       </div>
-      
-        <p class="mt-5 text-center">Created by Mohamad Rizal Yulianto &copy; 2023</p>
-      
-  </footer>
+
+      <p class="mt-5 text-center">
+        Created by Mohamad Rizal Yulianto &copy; 2023
+      </p>
+    </footer>
     <!--Footer End-->
 
+    <!--Bootraps-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <!-- feather icons -->
-    <script>
-      feather.replace();
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!--ENd-->
+    <script src="js/script.js"></script>
+    <script src="js/tiny-slider.js"></script>
   </body>
 </html>
