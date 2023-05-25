@@ -9,13 +9,15 @@
   z-index: 3;
 }
 
-*,
-.hero-img {
+* {
   z-index: 2;
+}
+.hero-img {
+  z-index: 1;
 }
 
 .aksen-img {
-  z-index: 1;
+  z-index: -1;
 }
 
 .navbar .navbar-nav a:hover {
@@ -67,6 +69,10 @@ h1 {
   left: 0;
 }
 
+.animate__animated {
+  animate-duration: 0.3s;
+}
+
 /*about Section*/
 .about {
   padding-top: 3rem;
@@ -87,6 +93,15 @@ section {
 
 h2 {
   color: #005643;
+}
+.hero-tagline .btn {
+  color: #005643;
+  background-color: #fff;
+}
+
+.hero-tagline .btn:hover {
+  color: #fff;
+  background-color: #ffcc00;
 }
 
 /*Layanan*/
@@ -193,7 +208,7 @@ h2 {
   left: -20px;
 }
 .product-grid .product-view:hover {
-  background: #ff6f00;
+  background: #048853;
 }
 .product-grid .product-links {
   padding: 0;
@@ -235,8 +250,8 @@ h2 {
 }
 .product-grid .product-links li a:hover {
   color: #fff;
-  background: #ff6f00;
-  border-color: #ff6f00;
+  background: #048853;
+  border-color: #048853;
 }
 .product-grid .product-content {
   background: #fff;
@@ -496,6 +511,12 @@ footer {
 
 .footer .sosial i:hover {
   color: #fccd01;
+}
+
+.footers {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid;
 }
 
 /*Media Query*/
