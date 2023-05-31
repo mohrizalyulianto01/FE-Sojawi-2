@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
     <link
@@ -19,6 +19,13 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
 
     <!-- My icons Bootstrap -->
@@ -41,11 +48,16 @@
 
     <title>Soto Jogja H.Alwi</title>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="10">
+  <body
+    data-spy="scroll"
+    data-target="#menu"
+    data-offset="1"
+    class="position-relative"
+  >
     <!--Navbar Start-->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed w-100 animate__animated animate__fadeInDown"
-      id="navbar-target"
+      id="navbarNav"
     >
       <div class="container">
         <a class="logo" href="#">
@@ -60,23 +72,23 @@
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
+          data-bs-target="#menu"
+          aria-controls="navbar"
+          aria-expanded="navbar"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse navbar-nav" id="navbarNav">
+        <div class="collapse navbar-collapse navbar-nav" id="navbar">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="btn" href="#home">Home</a>
+              <a class="btn" href="#hero">Home</a>
             </li>
             <li class="nav-item">
               <a class="btn" href="#about">Tentang Kami</a>
             </li>
             <li class="nav-item">
-              <a class="btn" href="#menu">Daftar Menu</a>
+              <a class="btn" href="#daftarmenu">Daftar Menu</a>
             </li>
             <li class="nav-item">
               <a class="btn" href="#layanan">Layanan</a>
@@ -104,7 +116,7 @@
           <div
             class="col-md-8 hero-tagline my-auto animate__animated animate__fadeInUp animate__delay-1s"
           >
-            <h1 class="fs-1 fw-bold">
+            <h1 class="fs-1 fw-bold tagline-hero">
               Mari Menikmati Semangkuk Soto <br />
               Di Pinggir Sawah
             </h1>
@@ -117,7 +129,7 @@
               menunya.
             </p>
             <a class="btn btn-lg fw-bold" href="#about" role="button"
-              >Kunjungi Kami</a
+              >Tentang Kami</a
             >
           </div>
         </div>
@@ -207,7 +219,7 @@
     <section id="about" class="about">
       <div class="container">
         <div class="col mb-3 mt-5 text-center">
-          <h2 class="fs-1 fw-bold">Tentang Kami</h2>
+          <h2 class="fs-1 fw-bold title">Tentang Kami</h2>
           <p>Mari Mengenal Kami Lebih Dekat</p>
         </div>
         <div class="row mt-5">
@@ -257,364 +269,559 @@
               <a onclick="myFunction()" id="myBtn" class="fw-bold">Read more</a>
             </p>
 
-            <p><strong>Kenapa Harus Mampir Ke Soto Jogja H.alwi?</strong></p>
-            <p class="text-muted">
-              Kami Memiliki tempat yang strategis dengan pemandangan view sawah
-              yang dilengkapi dengan lahan parkir yang luas,tempat ibadah dan wc
-              serta kami memiliki berbagai menu makanan soto<span id="text"
-                >...</span
-              ><span id="moreText"
-                >dan juga minman yang menyegarkan dengan harga standar
-                mahasiswa, sehingga sangat cocok digunakan untuk bersantai,
-                diskusi dan kumpul keluarga</span
-              >
-              <a onclick="Function()" id="Btnmore" class="fw-bold">Read more</a>
-            </p>
+            <!--<p><strong>Kenapa Harus Mampir Ke Soto Jogja H.alwi?</strong></p>-->
+            <!--<p class="text-muted">-->
+            <!--  Kami Memiliki tempat yang strategis dengan pemandangan view sawah yang dilengkapi dengan lahan parkir yang luas,tempat ibadah dan wc serta kami memiliki berbagai menu -->
+            <!--  makanan soto dan juga minman yang menyegarkan dengan harga standar mahasiswa, sehingga sangat cocok digunakan untuk bersantai, diskusi dan kumpul keluarga-->
+            <!--</p>-->
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#fff"
-          fill-opacity="1"
-          d="M0,128L48,149.3C96,171,192,213,288,229.3C384,245,480,235,576,229.3C672,224,768,224,864,213.3C960,203,1056,181,1152,181.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
     </section>
     <!--About End-->
 
-    <!--Menu Section Start-->
-    <section class="container" id="menu">
-      <div class="row grid">
-        <h2 class="fs-1 fw-bold">Daftar Menu</h2>
+    <!--Tabs Menu Start-->
+    <section class="container" id="daftarmenu">
+      <div id="tabs">
+        <h2 class="fs-1 fw-bold mt-5">Daftar Menu</h2>
         <p>Pilih menu favorite mu disini</p>
-        <!--Menu 1-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/sotoayam" />
-                <!--<img class="img-2" src="images/img-2.jpg">-->
-              </a>
-              <span class="product-hot-label">hot</span>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star"></li>
-                <li class="disable">(20 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Soto Daging</a></h3>
-              <div class="price">Rp. 6.000</div>
-            </div>
-          </div>
-        </div>
-        <!--Menu 2-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="100"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/sotodaging" />
-                <!--<img class="img-2" src="images/img-4.jpg">-->
-              </a>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="disable">(50 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Soto Daging</a></h3>
-              <div class="price">Rp. 10.000</div>
-            </div>
-          </div>
-        </div>
+        <div>
+          <div>
+            <nav>
+              <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                <a
+                  class="nav-item nav-link active"
+                  id="nav-makanan-tab"
+                  data-toggle="tab"
+                  href="#nav-makanan"
+                  role="tab"
+                  aria-controls="nav-makanan"
+                  aria-selected="true"
+                  ><i class="fa fa-cutlery p-1" aria-hidden="true"></i
+                  >Makanan</a
+                >
+                <a
+                  class="nav-item nav-link"
+                  id="nav-minuman-tab"
+                  data-toggle="tab"
+                  href="#nav-minuman"
+                  role="tab"
+                  aria-controls="nav-minuman"
+                  aria-selected="false"
+                  ><i class="bi bi-cup-straw"></i>Minuman</a
+                >
+              </div>
+            </nav>
+            <div class="tab-content py-3 px-3 px-sm-0 mt-4" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-makanan"
+                role="tabpanel"
+                aria-labelledby="nav-makanan-tab"
+              >
+                <div class="row grid">
+                  <!--Menu 1-->
+                  <div
+                    class="col-md-3 col-sm-6"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                  >
+                    <div class="product-grid mt-1">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/sotoayam" />
+                          <!--<img class="img-2" src="images/img-2.jpg">-->
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star"></li>
+                          <li class="disable">(20 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Soto Ayam</a></h3>
+                        <div class="price">Rp. 6.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 2-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/sotodaging" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="disable">(50 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Soto Daging</a></h3>
+                        <div class="price">Rp. 10.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 3-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/sambelayam" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star"></li>
+                          <li class="disable">(10 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Sambal Bakar Ayam</a></h3>
+                        <div class="price">Rp. 20.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 4-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/sslele" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-half"></li>
+                          <li class="disable">(30 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Sambel Bakar lele</a></h3>
+                        <div class="price">Rp. 15.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 5-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/tahu" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-half"></li>
+                          <li class="disable">(30 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Tahu Gejrot</a></h3>
+                        <div class="price">Rp. 10.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 6-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/telur" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-half"></li>
+                          <li class="disable">(30 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Sego Sambal Telor</a></h3>
+                        <div class="price">Rp. 12.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 7-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/mie" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-half"></li>
+                          <li class="disable">(30 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Mie Sambal Bakar</a></h3>
+                        <div class="price">Rp. 15.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 8-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/empal" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-half"></li>
+                          <li class="disable">(30 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Empal Gentong</a></h3>
+                        <div class="price">Rp. 20.000</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-        <!--Menu 2-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="100"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/sambelayam" />
-                <!--<img class="img-2" src="images/img-4.jpg">-->
-              </a>
-              <span class="product-hot-label">hot</span>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star"></li>
-                <li class="disable">(10 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Sambel Ayam</a></h3>
-              <div class="price">Rp. 20.000</div>
-            </div>
-          </div>
-        </div>
-        <!--Menu 4-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="100"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/sslele" />
-                <!--<img class="img-2" src="images/img-4.jpg">-->
-              </a>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-half"></li>
-                <li class="disable">(30 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Sambel lele</a></h3>
-              <div class="price">Rp. 15.000</div>
-            </div>
-          </div>
-        </div>
-        <!--Menu 5-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="100"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/milk" />
-                <!--<img class="img-2" src="images/img-4.jpg">-->
-              </a>
-              <span class="product-hot-label">hot</span>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-half"></li>
-                <li class="disable">(18 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Milkshake</a></h3>
-              <div class="price">Rp. 15.000</div>
-            </div>
-          </div>
-        </div>
-        <!--Menu 6-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="100"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/escoklat" />
-                <!--<img class="img-2" src="images/img-4.jpg">-->
-              </a>
-              <span class="product-hot-label">hot</span>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="disable">(10 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Es Coklat</a></h3>
-              <div class="price">Rp. 18.000</div>
-            </div>
-          </div>
-        </div>
-        <!--Menu 7-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="100"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/lemontea" />
-                <!--<img class="img-2" src="images/img-4.jpg">-->
-              </a>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-half"></li>
-                <li class="disable">(10 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Lemon Tea</a></h3>
-              <div class="price">Rp. 12.000</div>
-            </div>
-          </div>
-        </div>
-        <!--Menu 8-->
-        <div
-          class="col-md-3 col-sm-6"
-          data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="100"
-        >
-          <div class="product-grid">
-            <div class="product-image">
-              <a href="#" class="image">
-                <img class="img-1" src="assets/kopsu" />
-                <!--<img class="img-2" src="images/img-4.jpg">-->
-              </a>
-              <ul class="product-links">
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-random"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="product-view"><i class="fa fa-search"></i></a>
-            </div>
-            <div class="product-content">
-              <ul class="rating">
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star-fill"></li>
-                <li class="bi bi-star"></li>
-                <li class="disable">(10 reviews)</li>
-              </ul>
-              <h3 class="title"><a href="#">Kopi Susu</a></h3>
-              <div class="price">Rp. 8.000</div>
+              <!--Minuman-->
+              <div
+                class="tab-pane fade"
+                id="nav-minuman"
+                role="tabpanel"
+                aria-labelledby="nav-minuman-tab"
+              >
+                <div class="row grid">
+                  <!--Menu 5-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/milk" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-half"></li>
+                          <li class="disable">(18 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Milkshake</a></h3>
+                        <div class="price">Rp. 15.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 6-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/escoklat" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="disable">(10 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Es Coklat</a></h3>
+                        <div class="price">Rp. 18.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 7-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/lemontea" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-half"></li>
+                          <li class="disable">(10 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Lemon Tea</a></h3>
+                        <div class="price">Rp. 12.000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Menu 8-->
+                  <div
+                    class="col-md-3 col-sm-6 mt-1"
+                    data-aos="flip-left"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                  >
+                    <div class="product-grid">
+                      <div class="product-image">
+                        <a href="#" class="image">
+                          <img class="img-1" src="assets/kopsu" />
+                          <!--<img class="img-2" src="images/img-4.jpg">-->
+                        </a>
+                        <ul class="product-links">
+                          <li>
+                            <a href="#"><i class="fa fa-heart red"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-random"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </li>
+                        </ul>
+                        <!--<a href="#" class="product-view"><i class="fa fa-search"></i></a>-->
+                      </div>
+                      <div class="product-content">
+                        <ul class="rating">
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star-fill"></li>
+                          <li class="bi bi-star"></li>
+                          <li class="disable">(10 reviews)</li>
+                        </ul>
+                        <h3 class="title"><a href="#">Kopi Susu</a></h3>
+                        <div class="price">Rp. 8.000</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--Menu Section End-->
+    <!--Tabs menu End-->
 
     <!--Layanan section start-->
     <section class="layanan" id="layanan">
@@ -625,8 +832,8 @@
         data-aos-duration="1500"
       >
         <div class="row">
-          <div class="col-12 text-center">
-            <h2 class="fs-1 fw-bold">Layanan Kami</h2>
+          <div class="col-12 text-center mt-5">
+            <h2 class="fs-1 fw-bold title">Layanan Kami</h2>
             <span class="sub-title"
               >Memenuhi dan Mempermudah kebutuhan Anda</span
             >
@@ -642,7 +849,7 @@
                   class="position-absolute top-50 start-50 translate-middle"
                 />
               </div>
-              <h3 class="mt- 4 text-center">Reservasi</h3>
+              <h3 class="mt- 4 text-center title">Reservasi</h3>
               <p>
                 Gunakan layanan mudah dengan reservasi, supaya kamu dan
                 rombonganmu mendapatkan tempat atau view sesuka hatimu, buruan
@@ -659,7 +866,7 @@
                   class="position-absolute top-50 start-50 translate-middle"
                 />
               </div>
-              <h3 class="mt-4 text-center">Catering</h3>
+              <h3 class="mt-4 text-center title">Catering</h3>
               <p>
                 Kami Menawarkan layanan catering untuk menyediakan hajatan,
                 rapat dan partai besar, menu bisa kamu pilih sesuai kebutuhan
@@ -677,7 +884,7 @@
                   class="position-absolute top-50 start-50 translate-middle"
                 />
               </div>
-              <h3 class="mt-4 text-center">Sponsorship</h3>
+              <h3 class="mt-4 text-center title">Sponsorship</h3>
               <p>
                 Buat organisasi mahasiswa bisa bangget nih mengajukan kerjasama
                 berupa sponsorship, supaya organisasi kamu dapat berjalan dengan
@@ -693,8 +900,8 @@
     <!--Testimoni Start-->
     <section class="container-fluid" id="testi">
       <div class="row" data-aos="zoom-in-up" data-aos-duration="1000">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="mb-4 fs-1 fw-bold text-center">Testimoni</h2>
+        <div class="col-lg-8 mx-auto mt-5">
+          <h2 class="mb-4 fs-1 fw-bold text-center title">Testimoni</h2>
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Carousel indikator -->
             <ol class="carousel-indicators">
@@ -788,9 +995,9 @@
     <!--Section Kontak Start-->
     <section id="kontak">
       <div class="container" data-aos="fade-down-left" data-aos-duration="2000">
-        <div class="row text-center mb-3">
+        <div class="row text-center mt-5 mb-3">
           <div class="col">
-            <h2 class="fs-1 fw-bold">Hubungi Kami</h2>
+            <h2 class="fs-1 fw-bold title">Hubungi Kami</h2>
             <p>Ada yang bisa kami bantu? silahkan mengisi form dibawah ini</p>
           </div>
         </div>
@@ -825,13 +1032,16 @@
                     name="pesan"
                   ></textarea>
                 </div>
-                <button
-                  type="submit"
+                <a
                   class="btn btn-kirim"
-                  style="background-color: #005643; color: #fff"
+                  style="background-color: #048853; color: #fff"
+                  >Kirim</a
                 >
-                  kirim
-                </button>
+                <!--<a-->
+                <!--  type="submit"-->
+                <!--  class="btn btn-kirim">-->
+                <!--  kirim-->
+                <!--</a>-->
               </div>
             </form>
           </div>
@@ -848,8 +1058,8 @@
         data-aos-duration="2000"
       >
         <div class="row">
-          <div class="col-12 text-center mb-3 my-5">
-            <h2 class="text-green mb-4 text-center">
+          <div class="col-12 text-center mb-4 mt-5">
+            <h2 class="fs-1 fw-bold text-center title">
               Frequently Asked Questions
             </h2>
             <span class="sub-title">Pertanyaan Seputar Soto jogja H.Alwi</span>
@@ -879,7 +1089,7 @@
                       aria-expanded="false"
                       aria-controls="collapseOne"
                     >
-                      <i class="fa fa-home main"></i
+                      <i class="fa fa-calendar-check-o main"></i
                       ><i class="fa fa-angle-double-right mr-3"></i>Bagaimana
                       Cara Reservasi Tempat di Soto H.Alwi?
                     </button>
@@ -994,24 +1204,29 @@
       </div>
     </section>
     <!-- FAQ End-->
+
     <!--</main>-->
     <!--Footer Start-->
-    <footer class="footer mt-5 pt-5 bottom-0">
+    <footer class="footer mt-5 pb-5">
       <div class="container footers">
         <div class="row">
           <div class="col-lg-4 mt-3 col1">
             <h3 class="footer-brand" style="color: #fccd01">
               Soto Jogja H.Alwi
             </h3>
-            <a href="#" class="d-block"
+            <a href="#" class="d-block hi"
               ><i class="bi bi-whatsapp m-2"></i>0818-0318-0000</a
             >
-            <a href="#" class="d-inline-block"
+            <a href="#" class="d-inline-block hi"
               ><i class="bi bi-instagram m-2"></i>sotojogja_h.alwi</a
             >
-            <a href="#" class="d-block"
+            <a href="#" class="d-block hi"
+              ><i class="bi bi-tiktok m-2"></i>sotohajialwijogja</a
+            >
+            <a href="#" class="d-block hi"
               ><i class="bi bi-telephone m-2"></i>0818-0318-0000</a
             >
+
             <!--<div class="sosial mt-3">-->
             <!--    <a href="#"><i data-feather="instagram"></i></a>-->
             <!--    <a href="#" class="mx-3"><i data-feather="facebook"></i></a>-->
@@ -1061,7 +1276,7 @@
         </div>
       </div>
 
-      <p class="mt-3 p-3 text-center">
+      <p class="mt-3 text-center">
         Created by Mohamad Rizal Yulianto &copy; 2023
       </p>
     </footer>
@@ -1084,7 +1299,7 @@
     </script>
 
     <!--ENd-->
-    <script src="js/script.js"></script>
+    <script src="Javascript"></script>
     <script src="js/tiny-slider.js"></script>
   </body>
 </html>
